@@ -1,3 +1,6 @@
+import java.util.regex.Pattern;
+import java.io.*;
+import java.util.regex.*;
 
 public class Junitdemo {
 
@@ -5,7 +8,7 @@ public class Junitdemo {
 
 	}
 
-	public  String FirstName(String Name) {
+	public String FirstName(String Name) {
 		String personName = Name;
 
 		String UpperCase = personName.toUpperCase();
@@ -20,8 +23,7 @@ public class Junitdemo {
 		}
 
 	}
-	
-	
+
 	public String LastName(String Name) {
 		String personLastName = Name;
 
@@ -36,6 +38,25 @@ public class Junitdemo {
 			return null;
 		}
 
+	}
+
+	public boolean Emailid(String email) {
+		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z"
+				+ "A-Z]{2,7}$";
+
+		Pattern pat = Pattern.compile(emailRegex);
+		if (email == null)
+			return false;
+		return pat.matcher(email).matches();
+	}
+
+	public static boolean isValid(String s) {
+
+		Pattern p = Pattern.compile("^\\d{10}$");
+
+		Matcher m = p.matcher(s);
+
+		return (m.matches());
 	}
 
 }
