@@ -5,7 +5,7 @@ public class Junitdemo {
 
 	}
 
-	public String FirstName(String Name) {
+	public  String FirstName(String Name) {
 		String personName = Name;
 
 		String UpperCase = personName.toUpperCase();

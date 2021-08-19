@@ -1,7 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-public class ForTesting {
+public class ForTesting  {
 
 	Junitdemo testcase = new Junitdemo();
 
