@@ -1,4 +1,6 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 public class ForTesting {
@@ -14,5 +16,12 @@ public class ForTesting {
 	public void LastNameShouldBeMoreThenThreeLetterAndLastLetterShouldBeLetterCaptial() {
 		assertEquals("Ranjan", testcase.LastName("Ranjan"));
 	}
+	@Test
+	public void EmailIdshouldBeInProperFormat() {
+		assertEquals("shobhit.ranjan03@gmail.com", testcase.Emailid("shobhit.ranjan03@gmail.com"));
+		
+	}
+	
+	
 
 }
