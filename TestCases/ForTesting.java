@@ -12,7 +12,7 @@ public class ForTesting {
 
 	@Test
 	public void LastNameShouldBeMoreThenThreeLetterAndLastLetterShouldBeLetterCaptial() {
-		assertEquals("Ranjan", testcase.FirstName("Ranjan"));
+		assertEquals("Ranjan", testcase.LastName("Ranjan"));
 	}
 
 }
