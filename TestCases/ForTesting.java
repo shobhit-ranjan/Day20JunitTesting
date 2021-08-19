@@ -6,8 +6,13 @@ public class ForTesting {
 	Junitdemo testcase = new Junitdemo();
 
 	@Test
-	public void ShouldBeMoreThenThreeLetterAndFirstShouldBeLetterCaptial() {
+	public void FirstNameShouldBeMoreThenThreeLetterAndFirstLetterShouldBeLetterCaptial() {
 		assertEquals("Shobhit", testcase.FirstName("Shobhit"));
+	}
+
+	@Test
+	public void LastNameShouldBeMoreThenThreeLetterAndLastLetterShouldBeLetterCaptial() {
+		assertEquals("Ranjan", testcase.FirstName("Ranjan"));
 	}
 
 }
