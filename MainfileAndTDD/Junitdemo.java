@@ -13,7 +13,7 @@ public class Junitdemo {
 
 		String UpperCase = personName.toUpperCase();
 
-		if (UpperCase.charAt(0) == personName.charAt(0) && personName.length() > 2)
+		 if (UpperCase.charAt(0) == personName.charAt(0) && personName.length() > 2)
 
 		{
 			return personName;
