@@ -39,23 +39,28 @@ public class ForTesting {
 	}
 
 	@Test
-	public void passwordIsWrongWithLessLetters() {
-		assertEquals("shob", testcase.passwordLength("shob"));
-	}
-
-	@Test
 	public void passwordIsRight() {
 		assertEquals("Upa@123India", testcase.passwordLength("Upa@123India"));
 	}
 
 	@Test
-	public void passwordIsWrongWithNoUpperCase() {
-		assertEquals(null, testcase.passwordLength("ShobhitRanjan"));
+	public void passwordIsWrongWithLessLetters() {
+		assertEquals("shob", testcase.passwordLength("shob"));
 	}
 
 	@Test
 	public void PasswordShouldHaveANumber() {
 		assertEquals(null, testcase.passwordLength("ShobhitRanjan123"));
+	}
+
+	@Test
+	public void passwordShouldhaveAsepicalCharter() {
+		assertEquals(null, testcase.passwordLength("ShobhitRanjan123!@"));
+	}
+
+	@Test
+	public void passwordIsWrongWithNoUpperCase() {
+		assertEquals(null, testcase.passwordLength("ShobhitRanjan"));
 	}
 
 }
