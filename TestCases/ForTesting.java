@@ -44,8 +44,8 @@ public class ForTesting {
 	}
 
 	@Test
-	public void passwordShouldBeRight() {
-		assertEquals("Shobhit123Ranjan", testcase.passwordLength("Shobhit123Ranjan"));
+	public void passwordIsRight() {
+		assertEquals("Upa@123India", testcase.passwordLength("Upa@123India"));
 	}
 
 	@Test
@@ -53,5 +53,9 @@ public class ForTesting {
 		assertEquals(null, testcase.passwordLength("ShobhitRanjan"));
 	}
 
+	@Test
+	public void PasswordShouldHaveANumber() {
+		assertEquals(null, testcase.passwordLength("ShobhitRanjan123"));
+	}
 
 }
