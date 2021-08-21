@@ -43,4 +43,15 @@ public class ForTesting {
 		assertEquals("shob", testcase.passwordLength("shob"));
 	}
 
+	@Test
+	public void passwordIsRight() {
+		assertEquals("Upa@123India", testcase.passwordLength("Upa@123India"));
+	}
+
+	@Test
+	public void passwordIsWrongWithNoUpperCase() {
+		assertEquals(null, testcase.passwordLength("ShobhitRanjan"));
+	}
+
+
 }

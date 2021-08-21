@@ -66,11 +66,32 @@ public class Junitdemo {
 
 	}
 
-	public  String passwordLength(String pass) {
-		if (pass.length() > 7) {
-			return pass;
+	public String passwordLength(String pass) {
+
+		if (!((pass.length() >= 6) && (pass.length() <= 15))) {
+			return null;
+		}
+
+		if (pass.contains(" ")) {
+			return null;
+		}
+		if (true) {
+			int count = 0;
+
+			for (int i = 0; i <= 9; i++) {
+
+				String str1 = Integer.toString(i);
+
+				if (pass.contains(str1)) {
+					count = 1;
+				}
+			}
+			if (count == 0) {
+				return null;
+			}
+
 		}
 		return null;
-	}
 
+	}
 }
