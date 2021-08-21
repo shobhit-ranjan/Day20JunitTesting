@@ -13,7 +13,7 @@ public class Junitdemo {
 
 		String UpperCase = personName.toUpperCase();
 
-		 if (UpperCase.charAt(0) == personName.charAt(0) && personName.length() > 2)
+		if (UpperCase.charAt(0) == personName.charAt(0) && personName.length() > 2)
 
 		{
 			return personName;
@@ -57,6 +57,20 @@ public class Junitdemo {
 		Matcher m = p.matcher(s);
 
 		return (m.matches());
+	}
+
+	public static boolean phoneNumber(String s) {
+
+		String regex = "\\d{3}-\\d{3}-\\d{4}"; // XXX-XXX-XXXX
+		return s.matches(regex);
+
+	}
+
+	public  String passwordLength(String pass) {
+		if (pass.length() > 7) {
+			return pass;
+		}
+		return null;
 	}
 
 }

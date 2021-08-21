@@ -16,18 +16,31 @@ public class ForTesting {
 	public void LastNameShouldBeMoreThenThreeLetterAndLastLetterShouldBeLetterCaptial() {
 		assertEquals("Ranjan", testcase.LastName("Ranjan"));
 	}
+
 	@Test
 	public void EmailIdshouldBeInProperFormat() {
 		assertEquals("shobhit.ranjan03@gmail.com", testcase.Emailid("shobhit.ranjan03@gmail.com"));
-		
+
 	}
+
 	@Test
 	public void PhoneNumberShouldBeinProperFormat() {
 		assertTrue(Junitdemo.isValid("8934888299"));
 	}
+
 	@Test
 	public void PhoneNumberShouldBeinProperFormatGiveWrong() {
 		assertTrue(Junitdemo.isValid("8934888232322199"));
 	}
-	
-	
+
+	@Test
+	public void PasswordLengthShouldBeMoreThenEight() {
+		assertEquals("shobhit123", testcase.passwordLength("shobhit123"));
+	}
+
+	@Test
+	public void passwordIsWrongWithLessLetters() {
+		assertEquals("shob", testcase.passwordLength("shob"));
+	}
+
+}
